@@ -4,6 +4,15 @@ from PySide6.QtWidgets import QApplication, QMessageBox
 from ui import BibliotecaWindow
 from database import asegurar_directorios
 
+
+def resource_path(relative_path):
+    """Obtiene la ruta absoluta cuando se ejecuta desde .exe o desde Python"""
+    try:
+        base_path = sys._MEIPASS  # ruta temporal que crea PyInstaller
+    except Exception:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
+
 def preparar_directorios():
     """
     Crea automáticamente la estructura base del programa
@@ -40,6 +49,13 @@ def main():
         if os.path.isfile(qss_path):
             with open(qss_path, "r", encoding="utf-8") as style_file:
                 app.setStyleSheet(style_file.read())
+
+        try:
+            style_path = resource_path("style.qss")
+            with open(style_path, "r", encoding="utf-8") as f:
+                app.setStyleSheet(f.read())
+        except Exception as e:
+            print(f"⚠️ No se pudo cargar el estilo: {e}")
 
         ventana = BibliotecaWindow()
         asegurar_directorios()

@@ -11,7 +11,7 @@ def preparar_directorios():
     """
     base_dirs = [
         "data",
-        os.path.join("data", "backup"),
+        os.path.join("data", "backups"),
         "cache"
     ]
 

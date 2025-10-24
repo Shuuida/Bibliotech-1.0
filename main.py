@@ -58,7 +58,7 @@ def main():
                 print(f"🔍 Pantalla estándar detectada ({scale_factor}%) — usando estilo normal.")
         except Exception as e:
             print(f"⚠️ No se pudo detectar la escala de la pantalla: {e}")
-            style_path = resource_path("assets/styles.qss")
+            style_path = resource_path("assets/styles_default.qss")
 
         try:
             with open(style_path, "r", encoding="utf-8") as f:

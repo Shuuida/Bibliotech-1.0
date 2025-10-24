@@ -1,0 +1,43 @@
+# === Dependencias principales de Bibliotech 1.0 ===
+
+# GUI moderna y soporte de widgets Qt
+PySide6>=6.6.0
+
+# Motor de procesamiento de PDF y renderizado de portadas
+PyMuPDF>=1.23.5
+
+# Soporte de estructuras de datos y manipulación de JSON
+# (Incluido en Python estándar, pero se menciona para claridad)
+jsonlib>=1.6.1 ; python_version<"3.11"
+
+# Soporte de exportación CSV y gestión de copias de seguridad
+pandas>=2.1.0
+
+# Utilidades del sistema y manejo de archivos
+# (Estas librerías son estándar, no se instalan aparte)
+# os, shutil, datetime, random, string, re
+
+# Para desarrollo (opcional, no necesario en producción)
+# pylint, black, mypy
+
+
+
+# === Bibliotech 1.0 - Required Dependencies ===
+
+# GUI framework (modern Qt interface for windows, buttons, menus, tables, etc.)
+PySide6>=6.6.0
+
+# PDF engine for text extraction, thumbnail generation, and ISBN detection
+PyMuPDF>=1.23.5
+
+# Extended JSON support (optional but improves validation and serialization)
+jsonlib>=1.6.1 ; python_version<"3.11"
+
+# Data manipulation and CSV export capabilities
+pandas>=2.1.0
+
+# --- Standard Python libraries (already included) ---
+# os, shutil, datetime, random, string, re
+
+# --- Optional for development (not required for production) ---
+# pylint, black, mypy

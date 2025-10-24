@@ -1,0 +1,27 @@
+# === Python build / cache ===
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# === Virtual environments ===
+venv/
+.env/
+.venv/
+
+# === Data and JSON archives ===
+data/*.json
+
+# === Backup and temporary data ===
+data/backup/*.bak
+data/backup/*.log
+
+# === System / IDE files ===
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Auto-generated previews or thumbnails ---
+cache/*.jpg
+cache/*.png

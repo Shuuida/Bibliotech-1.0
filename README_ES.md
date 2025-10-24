@@ -130,6 +130,34 @@ El programa cuenta con un visor de portadas propio, en donde al subir los archiv
 
 ---
 
+## 🧩 Automatización de compilación (Windows)
+
+Bibliotech incluye un script de construcción automatizado que permite crear fácilmente una versión ejecutable (`.exe`) del programa.
+
+### 🧱 Cómo usarlo
+
+1. Asegúrate de tener **Python 3.13** (o superior) instalado y agregado al PATH del sistema.
+2. Haz doble clic sobre el archivo `build_exe.bat` ubicado en la raíz del proyecto.
+3. Espera a que el proceso termine.
+
+Cuando finalice, el ejecutable compilado estará disponible en:
+
+dist/Bibliotech.exe
+
+### ⚙️ Qué hace el script
+
+El script de compilación se encarga automáticamente de:
+- Limpiar las carpetas de compilaciones previas (`build/`, `dist/`, `.spec`)
+- Instalar y actualizar las dependencias necesarias:
+  - **PyInstaller 6.16.0**
+  - **PySide6 6.10.0**
+- Incluir todos los módulos y recursos requeridos:
+  - `assets/`, `data/`, `cache/`
+  - `ui.py`, `ux_helpers.py`, `pdf_reader.py`, `database.py`, `utils.py`, `models.py`
+- Generar el ejecutable final listo para funcionar en cualquier sistema Windows.
+
+> 💡 Este script facilita que cualquier colaborador o usuario pueda reconstruir el proyecto o probar su versión independiente sin configuraciones manuales.
+
 ## 🧑‍💻 Autor
 
 **Desarrollado por:** Michego Takoro

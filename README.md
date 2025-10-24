@@ -130,6 +130,34 @@ The program has its own cover viewer. When uploading PDF files, a preview of the
 
 ---
 
+## 🧩 Build Automation (Windows)
+
+Bibliotech includes an automated build script to easily create a standalone executable (`.exe`) version of the program.
+
+### 🧱 How to use it
+
+1. Make sure you have **Python 3.13** (or higher) installed and added to your system PATH.
+2. Double-click the `build_exe.bat` file located in the project root.
+3. Wait for the process to complete.
+
+Once finished, your compiled executable will be located at:
+
+dist/Bibliotech.exe
+
+### ⚙️ What the script does
+
+The build script automatically:
+- Cleans up previous build directories (`build/`, `dist/`, `.spec`)
+- Installs and updates required dependencies:
+  - **PyInstaller 6.16.0**
+  - **PySide6 6.10.0**
+- Packages all necessary modules and assets, including:
+  - `assets/`, `data/`, `cache/`
+  - `ui.py`, `ux_helpers.py`, `pdf_reader.py`, `database.py`, `utils.py`, `models.py`
+- Generates the final executable ready to run on any Windows machine.
+
+> 💡 This script makes it simple for contributors and users to rebuild the project or test the standalone version without manual setup.
+
 ## 🧑‍💻 Author
 
 **Developed by:** Michego Takoro

@@ -25,3 +25,8 @@ Thumbs.db
 # --- Auto-generated previews or thumbnails ---
 cache/*.jpg
 cache/*.png
+
+# --- Builds and program dependencies ---
+build/
+*.spec
+*.exe

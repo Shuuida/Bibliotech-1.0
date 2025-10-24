@@ -8,7 +8,7 @@
 
 ---
 
-**Bibliotech** es una aplicación de escritorio desarrollada en **Python + PySide6** que permite registrar, editar, eliminar y gestionar libros de manera eficiente, moderna y segura.
+**Bibliotech** es una aplicación de escritorio desarrollada en **Python + PySide6** que permite registrar, editar, eliminar y gestionar libros de manera eficiente, moderna y segura incluyendo la gestión y lectura de archivos PDF y procesado por lotes.
 Cuenta con **interfaz gráfica tipo Visual Studio Code**, guardado automático, exportación a CSV, respaldo de datos y soporte para archivos diarios o globales.
 
 (In the initial phase! May receive updates)
@@ -26,7 +26,7 @@ Cuenta con **interfaz gráfica tipo Visual Studio Code**, guardado automático, 
 ✅ Exportación a CSV
 ✅ Compatible con importación de archivos PDFs y lotes
 ✅ Almacenamiento de PDFs y metadatos del archivo
-✅ Puede abrir los PDF dentro del software (Necesario aplicaciones de terceros)
+✅ Puede abrir los PDF dentro del software al darle doble click (Necesario aplicaciones de terceros)
 ✅ Visualizador de portadas (Imágenes) para los PDF subidos
 ✅ Validación de datos (ISBN y fechas)
 ✅ Auto-guardado configurable (por segundos)
@@ -103,6 +103,12 @@ ISBN, Título, Autor, Editorial, Fecha de publicación
 
 ---
 
+## Procesamiento por lotes
+
+Puedes importar y procesar al sistema carpetas con distintos archivos PDF para gestion y lectura. Al subirlo el sistema leera los metadatos del archivo y los usara como ISBN, Título, Autor, Editorial y Fecha en que fue creado o publicado, siendo editable de igual manera a conveniencia del usuario.
+
+---
+
 ## 🧠 Validaciones
 
 * **ISBN** debe tener formato válido (`978-XXXXXXX` o similar).
@@ -115,6 +121,12 @@ ISBN, Título, Autor, Editorial, Fecha de publicación
 
 El programa utiliza un tema oscuro inspirado en **Visual Studio Code**, definido en `assets/style.qss`.
 Puedes modificar los colores, tipografía o botones desde ese archivo para personalizar la apariencia.
+
+---
+
+# Visualizador de Portadas personalizable
+
+El programa cuenta con un visor de portadas propio, en donde al subir los archivos PDF, se creara una preview de la portada usando de referencia la primera pagina del PDF en JPG guardada en cache, que puede ser igualmente personalizado con la imagen de preferencia del usuario (De preferencia, en el mismo formato que en las preview creadas por el programa).
 
 ---
 

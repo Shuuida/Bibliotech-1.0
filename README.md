@@ -8,7 +8,7 @@
 
 ---
 
-**Bibliotech** is a desktop application developed in **Python + PySide6** that allows users to register, edit, delete, and manage books efficiently, securely, and with a modern touch.
+**Bibliotech** is a desktop application developed in **Python + PySide6** that allows users to register, edit, delete, and manage books efficiently, securely, and with a modern touch, including PDF file management and reading and batch processing.
 It features a **Visual Studio Code–style dark interface**, automatic saving, CSV export, data backups, and support for both daily and global data modes.
 
 *(Currently in its initial release — future updates are expected.)*
@@ -26,7 +26,7 @@ It features a **Visual Studio Code–style dark interface**, automatic saving, C
 ✅ CSV export functionality
 ✅ PDF file and batch import support
 ✅ Storage of PDFs and their metadata
-✅ Ability to open PDFs directly from the software (requires third-party apps)
+✅ Ability to open PDFs directly from the software by using double-clicking (requires third-party apps)
 ✅ Cover preview (thumbnails) for uploaded PDFs
 ✅ Data validation (ISBN and dates)
 ✅ Configurable auto-save intervals (in seconds)
@@ -103,6 +103,12 @@ ISBN, Title, Author, Publisher, Publication Date
 
 ---
 
+## Batch Processing
+
+You can import and process folders containing different PDF files into the system for management and reading. Upon upload, the system will read the file's metadata and use it as ISBN, Title, Author, Publisher, and Date created or published. These metadata can also be edited at the user's convenience.
+
+---
+
 ## 🧠 Validations
 
 * **ISBN** must follow a valid format (`978-XXXXXXX` or similar).
@@ -115,6 +121,12 @@ ISBN, Title, Author, Publisher, Publication Date
 
 The application uses a dark theme inspired by **Visual Studio Code**, defined in `assets/style.qss`.
 You can edit colors, typography, or button styles in that file to customize the appearance.
+
+---
+
+# Customizable Cover Viewer
+
+The program has its own cover viewer. When uploading PDF files, a preview of the cover will be created using the cached JPG image of the first page of the PDF as a reference. This preview can also be customized with the user's preferred image (preferably in the same format as the previews created by the program).
 
 ---
 

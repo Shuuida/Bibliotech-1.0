@@ -30,6 +30,7 @@ Cuenta con **interfaz gráfica tipo Visual Studio Code**, guardado automático, 
 ✅ Visualizador de portadas (Imágenes) para los PDF subidos
 ✅ Validación de datos (ISBN y fechas)
 ✅ Auto-guardado configurable (por segundos)
+✅ Adaptación de pantalla automática para diferentes tipos de resolución. Desde pantallas comunes a de altas resoluciones (HiDPI)
 ✅ Totalmente **offline y multiplataforma**
 
 ---

@@ -30,6 +30,7 @@ It features a **Visual Studio Code–style dark interface**, automatic saving, C
 ✅ Cover preview (thumbnails) for uploaded PDFs
 ✅ Data validation (ISBN and dates)
 ✅ Configurable auto-save intervals (in seconds)
+✅ Automatic display adaptation for different resolutions. From standard displays to high-resolution (HiDPI) displays.
 ✅ Fully **offline and cross-platform**
 
 ---

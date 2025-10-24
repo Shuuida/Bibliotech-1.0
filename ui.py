@@ -150,10 +150,6 @@ class BibliotecaWindow(QWidget):
         self.quick_export_btn = QPushButton("Exportar CSV")
         self.quick_export_btn.setCursor(Qt.PointingHandCursor)
         sb_layout.addWidget(self.quick_export_btn)
-        self.btn_importar_pdf = QPushButton("Importar PDF")
-        self.btn_importar_pdf.setCursor(Qt.PointingHandCursor)
-        self.btn_importar_pdf.setToolTip("Importar uno o varios PDFs y llenar formulario")
-        sb_layout.addWidget(self.btn_importar_pdf)
         self.btn_procesar_lote = QPushButton("Procesar Lote PDF")
         self.btn_procesar_lote.setCursor(Qt.PointingHandCursor)
         self.btn_procesar_lote.setToolTip("Procesar todos los PDFs en una carpeta")
@@ -177,7 +173,8 @@ class BibliotecaWindow(QWidget):
         self.delete_btn = QPushButton("Eliminar")
         self.clear_btn = QPushButton("Limpiar campos")
         self.reload_btn = QPushButton("Recargar archivo")
-        btns = [self.add_btn, self.edit_btn, self.delete_btn, self.clear_btn, self.reload_btn]
+        self.btn_importar_pdf = QPushButton("Importar PDF")
+        btns = [self.add_btn, self.edit_btn, self.delete_btn, self.clear_btn, self.reload_btn, self.btn_importar_pdf]
         for b in btns:
             b.setCursor(Qt.PointingHandCursor)
             b.setMinimumHeight(34)
@@ -825,7 +822,7 @@ class BibliotecaWindow(QWidget):
         except Exception as e:
             QMessageBox.critical(self, "Error", f"No se pudo asignar la portada:\n{e}")
 
-    #Utility: theme fallback
+    #Utility: theme fallback (En caso de no leer styles_default.qss, no arruinar la estética de la UI en la app principal)
     def _default_dark_qss(self):
         # Paleta inspirada en VS Code (oscuro, acentos cyan)
         return """

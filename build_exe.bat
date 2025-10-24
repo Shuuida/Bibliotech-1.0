@@ -27,10 +27,9 @@ python -m pip install PySide6==6.10.0
 :: 4️⃣ Creación del ejecutable
 echo ⚙️ Compilando ejecutable con PyInstaller...
 python -m PyInstaller --noconsole --onefile --name "Bibliotech" ^
+--icon="assets/icon.ico" ^
 --collect-all PySide6 ^
 --add-data "assets;assets" ^
---add-data "data;data" ^
---add-data "cache;cache" ^
 --add-data "ui.py;." ^
 --add-data "ux_helpers.py;." ^
 --add-data "pdf_reader.py;." ^
@@ -41,7 +40,7 @@ main.py
 
 :: 5️⃣ Finalización
 if exist dist\Bibliotech.exe (
-    echo ✅ Compilacion completada con éxito.
+    echo ✅ Compilacion completada con exito.
     echo -------------------------------------------
     echo 📦 Ejecutable generado en: dist\Bibliotech.exe
 ) else (

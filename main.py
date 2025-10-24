@@ -1,6 +1,8 @@
 import sys
 import os
 from PySide6.QtWidgets import QApplication, QMessageBox 
+from PySide6.QtGui import QIcon
+from PySide6.QtCore import Qt
 from ui import BibliotecaWindow
 from database import asegurar_directorios
 
@@ -45,19 +47,30 @@ def main():
     try:
         app = QApplication(sys.argv)
         app.setStyle("Fusion")
-        qss_path = os.path.join(os.path.dirname(__file__), "styles.qss")
-        if os.path.isfile(qss_path):
-            with open(qss_path, "r", encoding="utf-8") as style_file:
-                app.setStyleSheet(style_file.read())
+        import ctypes
+        try:
+            scale_factor = ctypes.windll.shcore.GetScaleFactorForDevice(0)
+            if scale_factor > 125:
+                style_path = resource_path("assets/styles_fluent.qss")
+                print(f"🔍 Pantalla HiDPI detectada ({scale_factor}%) — usando estilo escalado.")
+            else:
+                style_path = resource_path("assets/styles_default.qss")
+                print(f"🔍 Pantalla estándar detectada ({scale_factor}%) — usando estilo normal.")
+        except Exception as e:
+            print(f"⚠️ No se pudo detectar la escala de la pantalla: {e}")
+            style_path = resource_path("assets/styles.qss")
 
         try:
-            style_path = resource_path("style.qss")
             with open(style_path, "r", encoding="utf-8") as f:
                 app.setStyleSheet(f.read())
         except Exception as e:
             print(f"⚠️ No se pudo cargar el estilo: {e}")
 
         ventana = BibliotecaWindow()
+
+        icon_path = resource_path("assets/icon.ico")
+        ventana.setWindowIcon(QIcon(icon_path))
+
         asegurar_directorios()
         ventana.show()
 

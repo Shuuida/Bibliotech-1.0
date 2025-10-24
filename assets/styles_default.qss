@@ -1,0 +1,15 @@
+/* assets/style.qss */
+
+QWidget { background: #0f1720; color: #cbd5e1; }
+        #sidebar { background: #0b1220; }
+        QLineEdit, QDateEdit, QComboBox { background: #111827; color: #e6eef6; border: 1px solid #27323d; border-radius: 4px; padding: 6px;}
+        QTableWidget { background: #0b1220; color: #e6eef6; selection-background-color: #075985; selection-color: #e6eef6; }
+        QHeaderView::section { background: #071221; color: #9fb4c8; padding: 6px; border: none; }
+        QPushButton { background: #0b63a9; color: white; border-radius: 6px; padding: 6px 10px;}
+        QPushButton:hover { background: #0f7acb; }
+        QPushButton:disabled { background: #334155; color: #94a3b8; }
+        QCheckBox { color: #9fb4c8; }
+        QStatusBar { background: #071221; color: #9fb4c8; border: none; }
+        QLabel { color: #cbd5e1; }
+        QComboBox { padding: 6px; }
+        QSpinBox { background: #0f1720; color: #cbd5e1; border: 1px solid #27323d; border-radius: 4px; padding: 4px;}

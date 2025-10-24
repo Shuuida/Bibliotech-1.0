@@ -30,7 +30,6 @@ It features a **Visual Studio Code–style dark interface**, automatic saving, C
 ✅ Cover preview (thumbnails) for uploaded PDFs
 ✅ Data validation (ISBN and dates)
 ✅ Configurable auto-save intervals (in seconds)
-✅ Quick search filters (Author, Title)
 ✅ Fully **offline and cross-platform**
 
 ---

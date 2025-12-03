@@ -3,8 +3,8 @@ import os
 from PySide6.QtWidgets import QApplication, QMessageBox 
 from PySide6.QtGui import QIcon
 from PySide6.QtCore import Qt
-from ui import BibliotecaWindow
-from database import asegurar_directorios
+from core.ui import BibliotecaWindow
+from core.database import asegurar_directorios
 
 
 def resource_path(relative_path):

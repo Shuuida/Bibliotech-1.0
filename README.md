@@ -175,7 +175,11 @@ This project is distributed under the **MIT License**, allowing free use, modifi
 MIT License © 2025 Michego Takoro
 ```
 
--------------------------------------------------------------------
+
+
+
+
+---
 
 
 

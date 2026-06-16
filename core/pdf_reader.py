@@ -1,6 +1,6 @@
 # ==========================================
 # Módulo de lectura avanzada de PDFs
-# para el Asistente Bibliotecario Virtual ----Bibliotech----.
+# para el Asistente Bibliotecario Virtual "Bibliotech".
 # Incluye:
 #   - Lectura de metadatos
 #   - Extracción de texto

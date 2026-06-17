@@ -24,7 +24,6 @@ from PySide6.QtGui import QPixmap, QImage, QPainter, QColor, QFont
 from PySide6.QtCore import Qt
 from typing import Optional
 
-#Funciones Principales
 
 # Lista de nombres alternativos comunes para cada campo
 _field_names = {
@@ -271,7 +270,6 @@ def procesar_lote(parent):
             QMessageBox.information(parent, "Sin cambios", "No se agregaron nuevos libros al sistema.")
 
 
-#Funciones de vista/Previsualización
 
 def mostrar_portada(parent, isbn):
     """
@@ -379,8 +377,6 @@ def vista_previa_pdf(parent, pdf_path):
     dialog.exec()
 
 
-#Funciones Auxiliares
-
 def leer_metadatos(pdf_path):
     doc = fitz.open(pdf_path)
     info = doc.metadata or {}
@@ -462,9 +458,6 @@ def mostrar_resumen(parent, info, isbn, texto, portada_path):
     layout.addWidget(btn_ok, alignment=Qt.AlignCenter)
     dialog.exec()
 
-
-
-# Funciones Internas
 def _parse_pdf_date(raw_date: str) -> str:
     if not raw_date:
         return ""

@@ -51,14 +51,11 @@ class BibliotecaWindow(QWidget):
         self.use_global = False
         self.selected_date = date.today()
 
-        # Cargar datos
-        self.biblioteca = database.cargar_biblioteca(fecha=self.selected_date, global_file=self.use_global)
 
-        # Autosave
+        self.biblioteca = database.cargar_biblioteca(fecha=self.selected_date, global_file=self.use_global)
         self.autosave_timer = QTimer(self)
         self.autosave_timer.timeout.connect(self._autoguardar)
 
-        # Construcción UI
         self._build_ui()
         self._connect_signals()
 
@@ -67,7 +64,6 @@ class BibliotecaWindow(QWidget):
         # Tabla de opciones al oprimir click derecho.
         self._setup_context_menu()
 
-        # Mensaje inicial
         self.status.showMessage("Listo — datos cargados.", 4000)
 
     #UI BUILDERS

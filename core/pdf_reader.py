@@ -58,11 +58,9 @@ def _safe_set_text(widget, text: str):
     if widget is None:
         return False
     try:
-        # QLineEdit tiene setText
         if hasattr(widget, "setText"):
             widget.setText(text)
             return True
-        # QLabel usa setText también
         if hasattr(widget, "setText"):
             widget.setText(text)
             return True
@@ -100,7 +98,7 @@ def importar_pdf(parent):
             fecha_raw = info.get("creationDate", "")
             fecha = _parse_pdf_date(fecha_raw)
 
-            # intentar asignar a widgets con nombres alternativos
+            # Asignar a widgets con nombres alternativos
             fields = {
                 "isbn": _find_field(parent, _field_names["isbn"]),
                 "titulo": _find_field(parent, _field_names["titulo"]),

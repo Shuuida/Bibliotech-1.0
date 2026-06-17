@@ -1,4 +1,3 @@
-# ==========================================
 # Módulo de lectura avanzada de PDFs
 # para el Asistente Bibliotecario Virtual "Bibliotech".
 # Incluye:
@@ -8,7 +7,6 @@
 #   - Generación y visualización de miniatura de portada
 #   - Procesamiento en lote
 #   - Vista previa dentro de la UI
-# ==========================================
 
 import os
 import re

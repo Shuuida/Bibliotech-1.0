@@ -112,7 +112,6 @@ def importar_pdf(parent):
                 "fecha": _find_field(parent, _field_names["fecha"])
             }
 
-            # Intentar detectar ISBN en las primeras páginas (opcional, aquí no extraemos texto completo)
             texto_preview = ""
             try:
                 # intentamos leer las primeras 5 páginas para detectar ISBN si hace falta
@@ -148,7 +147,6 @@ def importar_pdf(parent):
                         isbn_detected = isbn_candidate
                         break
 
-            # Asignar valores (si los widgets existen)
             if fields["titulo"]:
                 _safe_set_text(fields["titulo"], titulo)
             if fields["autor"]:
@@ -318,7 +316,6 @@ def abrir_pdf_externo(parent, isbn):
         return
 
     try:
-        #Abrir según sistema operativo
         if sys.platform.startswith('darwin'):  # macOS
             subprocess.call(('open', pdf_path))
 

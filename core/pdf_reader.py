@@ -14,7 +14,7 @@ import os
 import re
 import subprocess
 import sys
-import fitz  # PyMuPDF
+import fitz
 import database
 from datetime import datetime
 from PySide6.QtWidgets import (

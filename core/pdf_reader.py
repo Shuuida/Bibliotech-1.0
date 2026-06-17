@@ -129,7 +129,6 @@ def importar_pdf(parent):
             # si no hay widget de ISBN, igual intentamos detectar ISBN y lo devolvemos a parent
             isbn_detected = None
             try:
-                # patrón simple para ISBN (puede mejorarse)
                 import re
                 patron = r"(97[89][-– ]?\d{1,5}[-– ]?\d{1,7}[-– ]?\d{1,7}[-– ]?\d|(?:\d{1,5}[-– ]?\d{1,7}[-– ]?\d{1,7}[-– ]?[\dX]))"
                 match = re.search(patron, texto_preview)
@@ -160,7 +159,6 @@ def importar_pdf(parent):
             # guardar ruta del pdf en parent para que _on_add la asocie
             parent.current_pdf_path = pdf_path
 
-            # informar al usuario (no fallar si no existe QMessageBox por alguna razón)
             try:
                 QMessageBox.information(
                     parent,

@@ -1,5 +1,5 @@
 def funcion_que_sera_borrada():
-    print("Soy un fantasma temporal de prueba para Vex.")
+    print("Hola. Solo soy un fantasma temporal de prueba para Vex.")
     return True
 
 

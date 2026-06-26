@@ -1,6 +1,7 @@
 import hashlib
 import jwt
 
+
 def hash_password(pwd):
     return hashlib.sha256(pwd.encode()).hexdigest()
 

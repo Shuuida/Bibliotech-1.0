@@ -196,8 +196,6 @@ MIT License © 2025 Michego Takoro
 **Bibliotech** es una aplicación de escritorio desarrollada en **Python + PySide6** que permite registrar, editar, eliminar y gestionar libros de manera eficiente, moderna y segura incluyendo la gestión y lectura de archivos PDF y procesado por lotes.
 Cuenta con **interfaz gráfica tipo Visual Studio Code**, guardado automático, exportación a CSV, respaldo de datos y soporte para archivos diarios o globales.
 
-(In the initial phase! May receive updates)
-
 ---
 
 ## 🧩 Características principales
